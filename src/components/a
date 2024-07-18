@@ -1,0 +1,152 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+export function CarSlider() {
+  const cars = [
+    {
+      type: "Hatchback",
+      name: "Ford Focus",
+      price: 29,
+      start: 3.5,
+      image: "images/carSlider/car01.svg",
+      info: [
+        {
+          icon: "icons/carSlider/gearshift.svg",
+          text: "Manual",
+        },
+        {
+          icon: "icons/carSlider/seat.svg",
+          text: "5 Seat",
+        },
+        {
+          icon: "icons/carSlider/gas.svg",
+          text: "Gas",
+        },
+        {
+          icon: "icons/carSlider/engine.svg",
+          text: "1600 HP",
+        },
+        {
+          icon: "icons/carSlider/wheel.svg",
+          text: "Front",
+        },
+      ],
+    },
+    {
+      type: "Sedan",
+      name: "Toyora Corolla",
+      price: 25,
+      start: 5,
+      image: "images/carSlider/car02.svg",
+      info: [
+        {
+          icon: "icons/carSlider/gearshift.svg",
+          text: "Manual",
+        },
+        {
+          icon: "icons/carSlider/seat.svg",
+          text: "5 Seat",
+        },
+        {
+          icon: "icons/carSlider/gas.svg",
+          text: "Gas",
+        },
+        {
+          icon: "icons/carSlider/engine.svg",
+          text: "1600 HP",
+        },
+        {
+          icon: "icons/carSlider/wheel.svg",
+          text: "Front",
+        },
+      ],
+    },
+    {
+      type: "Suv",
+      name: "Honda CR-V",
+      price: 35,
+      start: 4.7,
+      image: "images/carSlider/car03.svg",
+      info: [
+        {
+          icon: "icons/carSlider/gearshift.svg",
+          text: "Automatic",
+        },
+        {
+          icon: "icons/carSlider/seat.svg",
+          text: "5 Seat",
+        },
+        {
+          icon: "icons/carSlider/gas.svg",
+          text: "Gas",
+        },
+        {
+          icon: "icons/carSlider/engine.svg",
+          text: "1600 HP",
+        },
+        {
+          icon: "icons/carSlider/wheel.svg",
+          text: "Front",
+        },
+      ],
+    },
+    {
+      type: "Convertible",
+      name: "Mazda MX-5",
+      price: 32,
+      start: 4.9,
+      image: "images/carSlider/car02.svg",
+      info: [
+        {
+          icon: "icons/carSlider/gearshift.svg",
+          text: "Manual",
+        },
+        {
+          icon: "icons/carSlider/seat.svg",
+          text: "5 Seat",
+        },
+        {
+          icon: "icons/carSlider/gas.svg",
+          text: "Gas",
+        },
+        {
+          icon: "icons/carSlider/engine.svg",
+          text: "1600 HP",
+        },
+        {
+          icon: "icons/carSlider/wheel.svg",
+          text: "Front",
+        },
+      ],
+    },
+  ];
+  return (
+    <Carousel className="w-full">
+      <CarouselContent>
+        {cars.map((item, index) => {
+          return (
+            <CarouselItem key={index}>
+              <div>
+                <img src={item.image} alt="" width={380} height={284} />
+                <div className="">
+                  <div className="">
+                    <div className="">{cars.type}</div>
+                    <h3 className="">{cars.name}</h3>
+                    <h3 className="">{cars.price}</h3>
+                  </div>
+                </div>
+              </div>
+            </CarouselItem>
+          );
+        })}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
+}

@@ -1,0 +1,17 @@
+---
+const links = [
+    { path: '/', name: 'Inicio' },
+    { path: '#cars', name: 'Autos' },
+    { path: '#about', name: 'Acerca de' },
+    { path: '/', name: 'Acerca de' },
+    { path: '/', name: 'Acerca de' },
+]
+---
+
+<div class="hidden xl:flex gap-x-8 items-center">
+    {links.map((link) => {
+        return <a href={link.path} class="relative hover:text-primary transition-all">
+            {link.name}
+        </a>
+    })}
+</div>

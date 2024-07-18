@@ -1,0 +1,2 @@
+docker build -t carwebsite .
+docker run -p 4321:4321 carwebsite:v1 --name carwebsite

@@ -1,0 +1,22 @@
+---
+import ThemeToggle from '@/components/ThemeToggle.astro'
+import Nav from '@/components/Nav.astro'
+---
+
+<header class="py-4 bg-secondary shadow-lg dark:bg-accent' 
+sticky top-0 z-30 transition-all">
+    <div class='container mx-auto'>
+        <div class='flex justify-between items-center'>
+            <div class='xl:hidden'>
+                <!-- <MobileNav /> -->
+            </div>
+            <a href="#">
+                <img src={"/icons/logo.svg"} width={194} height={64} alt="Logo" class="dark:bg-secondary-foreground rounded-lg px-2" />
+            </a>
+            <div class='flex items-center gap-x-6'>
+                <Nav />
+                <ThemeToggle />
+            </div>
+        </div>
+    </div>
+</header>
